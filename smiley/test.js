@@ -12,9 +12,9 @@ g.append('circle')
 const appendEye = function(target, side) {
   const hOff = 50;
   const vOff = -40;
-  const eyeSize = 20;
+  const eyeSize = 15;
   const browHeight = 10;
-  const browWidth = 40;
+  const browWidth = 50;
   const browDist = 40;
   target
     .append('circle')
@@ -22,25 +22,27 @@ const appendEye = function(target, side) {
     .attr('cx', hOff * side)
     .attr('cy', vOff);
 
-  const eye = target
+  const browAnchor = target.append('g').attr('transform', `translate(${hOff * side},${vOff})`);
+
+  const brow = browAnchor
     .append('rect')
     .attr('width', browWidth)
-    .attr('height', browHeight);
+    .attr('height', browHeight)
+    .attr('x', -browWidth / 2)
+    .attr('y', -browDist);
 
-  const moveEye = () => {
-    eye
-      .attr('x', hOff * side - browWidth / 2)
-      .attr('y', vOff - browDist)
+  const moveBrow = () => {
+    brow
       .transition()
       .duration(1000)
-      .attr('y', vOff - browDist - 20)
+      .attr('transform', `rotate(${40 * side})`)
       .transition()
       .duration(1000)
-      .attr('y', vOff - browDist)
-      .on('end', moveEye);
+      .attr('transform', `rotate(${-40 * side})`)
+      .on('end', moveBrow);
   };
 
-  moveEye(eye);
+  moveBrow();
 };
 
 appendEye(g, -1);
