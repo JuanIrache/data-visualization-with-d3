@@ -37,13 +37,14 @@ const render = data => {
     .selectAll('.domain, .tick line')
     .remove();
 
-  const xAxis = axisBottom(xScale).tickFormat(input => format('.3s')(input).replace(/G$/, 'B'));
+  const xAxis = axisBottom(xScale)
+    .tickFormat(input => format('.3s')(input).replace(/G$/, 'B'))
+    .tickSize(-height);
   const bottomG = g
     .append('g')
     .attr('transform', `translate(0,${height})`)
     .call(xAxis);
   bottomG.select('.domain').remove();
-  bottomG.selectAll('.tick line').attr('y2', -height);
 
   bottomG
     .append('text')
