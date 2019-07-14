@@ -2,6 +2,7 @@ const { select, arc } = d3;
 const svg = select('svg');
 const width = +svg.attr('width');
 const height = +svg.attr('height');
+//center all
 const g = svg.append('g').attr('transform', `translate(${width / 2},${height / 2})`);
 
 g.append('circle')
