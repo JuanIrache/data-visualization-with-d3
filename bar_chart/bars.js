@@ -8,7 +8,7 @@ const render = data => {
   const xVal = d => d.population;
   const yVal = d => d.country;
 
-  const margin = { top: 60, bottom: 50, left: 150, right: 50 };
+  const margin = { top: 45, bottom: 60, left: 150, right: 50 };
 
   const g = svg.append('g').attr(
     'transform',
@@ -18,7 +18,7 @@ const render = data => {
   );
 
   g.append('text')
-    .text('Bar chart')
+    .text('BAR CHART EXERCISE')
     .attr('class', 'top-title')
     .attr('x', width / 2)
     .attr('y', -15);

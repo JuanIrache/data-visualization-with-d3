@@ -12,20 +12,21 @@ rect {
 }
 
 .tick line {
-  stroke: rgba(0, 0, 0, 0.1);
+  stroke: rgb(228, 228, 228);
+}
+
+.tick text {
+  fill: rgb(87, 87, 87);
 }
 
 .top-title {
   font-size: 2.5rem;
   text-align: center;
   text-anchor: middle;
+  fill: rgb(87, 87, 87);
 }
 
 .label {
-  font-size: 1.5rem;
-  fill: black;
-}
-
-.bar-value {
-  fill: black;
+  font-size: 1.9rem;
+  fill: rgb(116, 116, 116);
 }
