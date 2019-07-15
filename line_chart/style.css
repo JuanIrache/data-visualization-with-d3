@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+}
+
+text {
+  font-size: 1.1rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+path {
+  stroke: steelblue;
+  fill: none;
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+
+.tick line {
+  stroke: rgb(228, 228, 228);
+}
+
+.tick text {
+  fill: rgb(87, 87, 87);
+}
+
+.top-title {
+  font-size: 2.5rem;
+  text-align: center;
+  text-anchor: middle;
+  fill: rgb(87, 87, 87);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+.label {
+  font-size: 1.9rem;
+  fill: rgb(116, 116, 116);
+  text-transform: capitalize;
+  text-anchor: middle;
+}
