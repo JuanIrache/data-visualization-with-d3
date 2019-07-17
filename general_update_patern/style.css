@@ -1,3 +1,17 @@
 body {
   margin: 0;
 }
+
+text {
+  text-anchor: middle;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+
+text:hover {
+  text-decoration: underline;
+}
+
+circle {
+  stroke-width: 4px;
+}
